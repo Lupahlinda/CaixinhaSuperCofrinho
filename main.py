@@ -1,21 +1,13 @@
 def calcular_iof(dias):
-    if dias <= 1:
-        return 96
-    elif dias <= 2:
-        return 93
-    elif dias <= 3:
-        return 90
-    elif dias <= 4:
-        return 86
-    elif dias <= 5:
-        return 83
-    elif dias <= 6:
-        return 80
-    elif dias <= 29:
-        return 70 - (dias - 7)  # simplificado
-    else:
-        return 0
-
+    tabela_iof = {
+        1: 96, 2: 93, 3: 90, 4: 86, 5: 83, 6: 80,
+        7: 76, 8: 73, 9: 70, 10: 66, 11: 63, 12: 60,
+        13: 56, 14: 53, 15: 50, 16: 46, 17: 43, 18: 40,
+        19: 36, 20: 33, 21: 30, 22: 26, 23: 23, 24: 20,
+        25: 16, 26: 13, 27: 10, 28: 6, 29: 3, 30: 0
+    }
+    return tabela_iof.get(dias, 0)
+    ## O IOF é cobrado apenas para investimentos com prazo inferior a 30 dias.
 def calcular_ir(dias):
     if dias <= 180:
         return 22.5
@@ -25,12 +17,14 @@ def calcular_ir(dias):
         return 17.5
     else:
         return 15
+#
+def calcular_investimento(valor_inicial, dias, taxa_rendimento=0.1415):  # 14,15% ao ano
+    rendimento_diario = (1 + taxa_rendimento) ** (1 / 365) - 1
+    rendimento_bruto = valor_inicial * rendimento_diario * dias
 
-def calcular_investimento(valor_inicial, dias, taxa_rendimento=0.08):
-    rendimento_bruto = valor_inicial * (taxa_rendimento / 30) * dias
     iof_percentual = calcular_iof(dias)
     iof_valor = rendimento_bruto * (iof_percentual / 100)
-    
+
     rendimento_pos_iof = rendimento_bruto - iof_valor
     ir_percentual = calcular_ir(dias)
     ir_valor = rendimento_pos_iof * (ir_percentual / 100)
@@ -44,10 +38,10 @@ def calcular_investimento(valor_inicial, dias, taxa_rendimento=0.08):
         "Valor Líquido": valor_liquido
     }
 
-# Exemplo de uso:
 valor = float(input("Digite o valor inicial do investimento: R$ "))
 dias = int(input("Digite o número de dias do investimento: "))
-
+#O IR é cobrado apenas para investimentos com prazo superior a 180 dias.  
+#O rendimento é de 14,15% ao ano, o que equivale a aproximadamente 0,0387% ao dia.
 resultado = calcular_investimento(valor, dias)
 
 for chave, valor in resultado.items():
