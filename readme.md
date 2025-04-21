@@ -2,6 +2,13 @@
 
 Este projeto é um simulador de investimentos que calcula o rendimento líquido de uma aplicação financeira com base no tempo investido, taxa de rendimento, IOF e Imposto de Renda.
 
+## ▶️ Como executar
+
+1. Clone este repositório:
+   git clone https://github.com/seu-usuario/caixinha-super-cofrinho.git
+   cd caixinha-super-cofrinho
+   python main.py
+
 ## 📚 Sobre
 
 Trabalho 1 para a disciplina de **Aprendizagem de Máquina** do curso de Ciência da Computação da **faculdade IESB - Campus Ceilândia Sul**.
@@ -23,11 +30,13 @@ Projeto desenvolvido pelos alunos:
 
 - **Python 3**
 
-## ▶️ Como executar
+Main.py é o arquivo principal, este script executa o simulador de investimentos da Caixinha Super Cofrinho.
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/caixinha-super-cofrinho.git
-   cd caixinha-super-cofrinho
-   python main.py
+Ele solicita ao usuário o valor inicial, a taxa de rendimento anual e o tempo de aplicação em dias.
+A partir dessas informações, calcula:
+- O rendimento bruto
+- Os impostos de IOF e IR
+- O valor total antes dos impostos
+- E o valor líquido final após todos os descontos
 
+Ideal para fins educacionais e para demonstrar a lógica por trás de aplicações financeiras simples.
