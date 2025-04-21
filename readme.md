@@ -29,3 +29,5 @@ Projeto desenvolvido pelos alunos:
    ```bash
    git clone https://github.com/seu-usuario/caixinha-super-cofrinho.git
    cd caixinha-super-cofrinho
+   python main.py
+
