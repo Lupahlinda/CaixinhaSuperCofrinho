@@ -18,8 +18,8 @@ Trabalho 1 para a disciplina de **Aprendizagem de Máquina** do curso de Ciênci
 Projeto desenvolvido pelos alunos:
 
 - **Luis Henrique** - 24114290041  
-- **Alessandro** - (colocar matrícula)  
-- **Igor Rangel** - (colocar matrícula)  
+- **Alessandro** - 24114290027  
+- **Igor Rangel** -   
 
 ## 🧠 Funcionalidades
 
