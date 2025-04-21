@@ -5,9 +5,11 @@ Este projeto é um simulador de investimentos que calcula o rendimento líquido 
 ## ▶️ Como executar
 
 1. Clone este repositório:
-   git clone https://github.com/seu-usuario/caixinha-super-cofrinho.git
-   cd caixinha-super-cofrinho
-   python main.py
+```bash
+git clone https://github.com/seu-usuario/caixinha-super-cofrinho.git
+cd caixinha-super-cofrinho
+python main.py
+```
 
 ## 📚 Sobre
 
