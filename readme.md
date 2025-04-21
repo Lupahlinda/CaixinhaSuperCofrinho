@@ -19,7 +19,7 @@ Projeto desenvolvido pelos alunos:
 
 - **Luis Henrique** - 24114290041  
 - **Alessandro** - 24114290027  
-- **Igor Rangel** -   
+- **Igor Rangel** -  24114290156 
 
 ## 🧠 Funcionalidades
 
